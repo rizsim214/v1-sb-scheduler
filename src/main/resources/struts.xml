@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="sb-clinic-default" namespace="/" extends="struts-default">
+        <default-action-ref name="clinic"/>
+        <action name="clinic" class="com.scheduler.sbclinic.Index">
+            <result>/WEB-INF/views/main.jsp</result>
+        </action>
+
+        <action name="home" class="com.scheduler.sbclinic.Home">
+            <result>/index.jsp</result>
+        </action>
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
