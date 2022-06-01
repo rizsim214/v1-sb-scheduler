@@ -2,9 +2,10 @@ package com.scheduler.sbclinic;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class Home extends ActionSupport {
+public class Contact extends ActionSupport{
     @Override
-    public String execute() throws Exception {
+    public String execute() throws Exception{
+        
         return SUCCESS;
     }
 }
