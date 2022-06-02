@@ -6,8 +6,7 @@
 	    <s:include value="/WEB-INF/includes/_navigation.jsp" />
 	</header>
 	<main>
-	    <s:url var="doctor" value="../../../../assets/images/doctor.svg" />
-	    <img src="${doctor}" border="0" alt="Home">
+	    <h1>HELLO FROM PROFILE</h1>
 	</main>
 
 <s:include value="/WEB-INF/includes/_footer.jsp" />

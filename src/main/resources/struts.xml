@@ -6,31 +6,29 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.devMode" value="true"/>
 
+    
+
     <package name="sb-clinic-default" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
-        
+
         <action name="login" class="com.scheduler.sbclinic.Login">
             <result>/WEB-INF/views/Login.jsp</result>
         </action>
-
         <action name="appointment" class="com.scheduler.sbclinic.Appointment">
             <result>/WEB-INF/views/Appointment.jsp</result>
         </action>
-        
         <action name="services" class="com.scheduler.sbclinic.Services">
             <result>/WEB-INF/views/Services.jsp</result>
         </action>
-
         <action name="contact" class="com.scheduler.sbclinic.Contact">
             <result>/WEB-INF/views/Contact.jsp</result>
         </action>
-
         <action name="index" class="com.scheduler.sbclinic.Index">
-            <result>/index.jsp</result>
+            <result>/WEB-INF/views/Index.jsp</result>
         </action>
-        
       
     </package>
 
     <!-- Add addition packages and configuration here. -->
+    <include file="com/scheduler/sbclinic/login/signin.xml"></include>
 </struts>
