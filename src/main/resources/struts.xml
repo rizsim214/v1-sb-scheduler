@@ -6,29 +6,30 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.devMode" value="true"/>
 
-    
-
     <package name="sb-clinic-default" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
 
-        <action name="login" class="com.scheduler.sbclinic.Login">
-            <result>/WEB-INF/views/Login.jsp</result>
+        <action name="login" class="com.scheduler.sbclinic.pages.login.Login">
+            <interceptor-ref name="defaultStack"/>
+            <result name="input">/WEB-INF/views/Login.jsp</result>
+            <result name="success">/WEB-INF/views/profiles/Patient.jsp</result>
+            <result name="error">/WEB-INF/views/Login.jsp</result>
         </action>
-        <action name="appointment" class="com.scheduler.sbclinic.Appointment">
+        <action name="appointment" class="com.scheduler.sbclinic.pages.Appointment">
             <result>/WEB-INF/views/Appointment.jsp</result>
         </action>
-        <action name="services" class="com.scheduler.sbclinic.Services">
+        <action name="services" class="com.scheduler.sbclinic.pages.Services">
             <result>/WEB-INF/views/Services.jsp</result>
         </action>
-        <action name="contact" class="com.scheduler.sbclinic.Contact">
+        <action name="contact" class="com.scheduler.sbclinic.pages.Contact">
             <result>/WEB-INF/views/Contact.jsp</result>
         </action>
-        <action name="index" class="com.scheduler.sbclinic.Index">
+        <action name="index" class="com.scheduler.sbclinic.pages.Index">
             <result>/WEB-INF/views/Index.jsp</result>
         </action>
       
     </package>
 
     <!-- Add addition packages and configuration here. -->
-    <include file="com/scheduler/sbclinic/login/signin.xml"></include>
+    
 </struts>

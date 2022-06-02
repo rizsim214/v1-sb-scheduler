@@ -1,8 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* font-family: 'Oxygen', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
 }
 
 .nav-link{
@@ -18,16 +21,33 @@
     font-weight: 700;
     text-shadow: 1px 1px var(--bs-dark);
     letter-spacing: 0.1rem;
+    /* font-family: 'Oxygen', sans-serif; */
 }
 
-.btn-outline-light{
-    border-radius: 1rem;
+.btn-outline-light, .btn-outline-info, .btn-light, .btn-info {
+    border-radius: 1.5rem;
     padding: 0 1rem;
     font-size: 22px;
 }
 
 .tdInput{
     max-width: 500px;
-   
 }
 
+.errorMessage{
+    color: rgb(241, 35, 35);
+    font-weight: 600;
+}
+
+.desc{
+    margin: 0;
+    text-align: justify;
+}
+
+.bg-silver{
+    background: rgba(231, 229, 229, 0.884);
+}
+
+.rounded{
+    border-radius: 2rem;
+}

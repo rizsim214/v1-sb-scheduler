@@ -3,10 +3,10 @@
 
 <s:include value="/WEB-INF/includes/_header.jsp" />
 	<header>
-	    <s:include value="/WEB-INF/includes/_navigation.jsp" />
+	    <s:include value="/WEB-INF/includes/_session-navigation.jsp" />
 	</header>
 	<main>
-	    <h1>HELLO FROM PROFILE</h1>
+	    <h3><s:property value="sessionAccount.email" /></h3>
 	</main>
 
 <s:include value="/WEB-INF/includes/_footer.jsp" />

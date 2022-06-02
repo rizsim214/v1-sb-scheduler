@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
    <div class="container">
         <s:url var="home" action="clinic" /> 
         <s:a href="%{home}" class="navbar-brand">
-            <i class="fa-solid fa-stethoscope"></i> CLINIC
+            <i class="fa-solid fa-stethoscope"></i> St.Benedict's Clinic
         </s:a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@ pageEncoding="UTF-8"%>
             <ul class="navbar-nav ms-auto d-flex align-items-center">
                 <li class="nav-item">
                     <s:url var="appointment" action="appointment" /> 
-                    <s:a class="nav-link" href="%{appointment}">Appointment </s:a>
+                    <s:a class="nav-link" href="%{appointment}">Appointments </s:a>
                 </li>
                 <li class="nav-item">
                     <s:url var="services" action="services" /> 
@@ -28,7 +28,7 @@ pageEncoding="UTF-8"%>
                 </li>
                 <li class="nav-item">
                     <s:url var="login" action="login" /> 
-                    <s:a class="btn btn-outline-light ms-3" href="%{login}">Sign In </s:a>
+                    <s:a class="btn btn-light ms-3 px-4 py-1" href="%{login}">Sign In </s:a>
                 </li>
             </ul>
         </div>

@@ -1,4 +1,4 @@
-package com.scheduler.sbclinic;
+package com.scheduler.sbclinic.pages;
 
 import com.opensymphony.xwork2.ActionSupport;
 
