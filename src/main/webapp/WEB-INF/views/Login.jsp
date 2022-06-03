@@ -11,9 +11,9 @@
 			<s:if test="%{#error != null}">
 				<p class="text-danger h5 bg-light text-center py-1"><s:property value="error" /></p>
 			</s:if>
-			<h3 class="text-center text-light">SIGN IN NOW!</h3>
+			<h3 class="text-center text-light">WELCOME GUEST!</h3>
 	    	<s:include value="/WEB-INF/includes/_form-login.jsp" />
-			<p class="text-light text-center mt-2">No scheduled date yet?  <s:a href="#" class="text-light h5">Request Appointment</s:a></p>
+			<p class="text-primary text-center mt-2">No scheduled date yet?  <s:a href="#" class="text-light text-decoration-none h5">Request Appointment</s:a></p>
 		</div>
 	</main>
 

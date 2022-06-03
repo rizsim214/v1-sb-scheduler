@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info py-4">
    <div class="container">
-        <s:url var="home" action="clinic" /> 
+        <s:url var="home" value="/index.html" /> 
         <s:a href="%{home}" class="navbar-brand">
             <i class="fa-solid fa-stethoscope"></i> St.Benedict's Clinic
         </s:a>
@@ -15,19 +15,19 @@ pageEncoding="UTF-8"%>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <s:url var="appointment" action="appointment" /> 
+                    <s:url var="appointment" action="pages/appointment" /> 
                     <s:a class="nav-link" href="%{appointment}">Appointments </s:a>
                 </li>
                 <li class="nav-item">
-                    <s:url var="services" action="services" /> 
+                    <s:url var="services" action="pages/services" /> 
                     <s:a class="nav-link" href="%{services}">Clinical Services </s:a>
                 </li>
                 <li class="nav-item">
-                    <s:url var="contact" action="contact" /> 
+                    <s:url var="contact" action="pages/contact" /> 
                     <s:a class="nav-link" href="%{contact}">Contact Us </s:a>
                 </li>
                 <li class="nav-item">
-                    <s:url var="login" action="login" /> 
+                    <s:url var="login" action="pages/login" /> 
                     <s:a class="btn btn-light ms-3 px-4 py-1" href="%{login}">Sign In </s:a>
                 </li>
             </ul>
