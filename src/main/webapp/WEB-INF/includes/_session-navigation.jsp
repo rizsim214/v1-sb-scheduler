@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info py-4">
    <div class="container">
-        <s:url var="home" action="clinic" /> 
+        <s:url var="home" value="/index.html" /> 
         <s:a href="%{home}" class="navbar-brand">
             <i class="fa-solid fa-stethoscope"></i> CLINIC
         </s:a>
@@ -21,8 +21,8 @@ pageEncoding="UTF-8"%>
                         <li><a class="dropdown-item" href="#">View History</a></li>
                         <li><a class="dropdown-item" href="#">Update Account</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <s:url var="sign-out" action="clinic" /> 
-                        <li><s:a class="dropdown-item" href="%{sign-out}">Sign Out</s:a></li>
+                        
+                        <li><s:a class="dropdown-item" href="%{home}">Sign Out</s:a></li>
                    </ul>
                 </li>
             </ul>

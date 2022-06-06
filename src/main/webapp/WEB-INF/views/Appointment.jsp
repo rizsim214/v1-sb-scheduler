@@ -6,8 +6,10 @@
 	    <s:include value="/WEB-INF/includes/_navigation.jsp" />
 	</header>
 	<main>
-	    <s:url var="doctor" value="../../../../assets/images/doctor.svg" />
-	    <img src="${doctor}" border="0" alt="Home">
+		
+			<h2 class="text-center mt-3">Appointment Calendar</h2>
+			<s:include value="/WEB-INF/includes/appointment/_calendar.jsp"/>
+		
 	</main>
 
 <s:include value="/WEB-INF/includes/_footer.jsp" />

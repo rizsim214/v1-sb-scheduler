@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+          "-//Apache Struts//XWork Validator 1.0.2//EN"
+          "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+    <field name="contactBean.email">
+        <field-validator type="requiredstring">
+            <message>Email is Required*</message>
+        </field-validator>
+        <field-validator type="email">
+            <message>Enter an Email Address*</message>
+        </field-validator>
+    </field>
+      
+    <field name="contactBean.contactInfo">
+        <field-validator type="requiredstring">
+            <message>Mobile Number Required*</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="maxLength">11</param>
+            <message>Mobile Number must be  below ${maxLength} characters long</message>
+        </field-validator>
+    </field>
+    <field name="contactBean.title">
+        <field-validator type="requiredstring">
+            <message>Title is Required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="maxLength">50</param>
+            <message>Title must be below ${maxLength} characters loing</message>
+        </field-validator>
+    </field>
+    <field name="contactBean.message">
+        <field-validator type="requiredstring">
+            <message>Message is Required*</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="maxLength">50</param>
+            <message>Title must be below ${maxLength} characters loing</message>
+        </field-validator>
+    </field>
+</validators>

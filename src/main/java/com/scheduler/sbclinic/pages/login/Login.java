@@ -20,9 +20,7 @@ public class Login extends ActionSupport{
         accountBean = getAccountBean();
         String returnValue;
         
-        if(accountBean.getEmail().length() == 0 && accountBean.getUserPassword().length() == 0) {
-            returnValue = INPUT;
-        }else if(fetchToDB()){
+       if(fetchToDB()){
             returnValue = SUCCESS;
         }else{
             returnValue = ERROR;
@@ -31,6 +29,10 @@ public class Login extends ActionSupport{
         return returnValue;
     }
     
+    public String loginInput() throws Exception {
+        
+        return INPUT;
+    }
     private boolean fetchToDB() throws Exception{
 
         Connection connection = null;

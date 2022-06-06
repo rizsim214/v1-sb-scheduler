@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info py-4">
-   <div class="container">
+   <div class="container-fluid px-5">
         <s:url var="home" value="/index.html" /> 
         <s:a href="%{home}" class="navbar-brand">
             <i class="fa-solid fa-stethoscope"></i> St.Benedict's Clinic

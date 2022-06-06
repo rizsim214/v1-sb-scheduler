@@ -8,7 +8,6 @@
 
     <package name="sb-clinic-pages" namespace="/pages" extends="struts-default">
         
-        
         <action name="login" class="com.scheduler.sbclinic.pages.login.Login">
             <interceptor-ref name="defaultStack"/>
             <result name="input">/WEB-INF/views/Login.jsp</result>
@@ -21,10 +20,15 @@
         <action name="services" class="com.scheduler.sbclinic.pages.Services">
             <result>/WEB-INF/views/Services.jsp</result>
         </action>
-        <action name="contact" class="com.scheduler.sbclinic.pages.Contact">
-            <result>/WEB-INF/views/Contact.jsp</result>
+        <action name="contact" class="com.scheduler.sbclinic.pages.contact.Contact" method="execute">
+            <result name="input">/WEB-INF/views/Contact.jsp</result>
         </action>
-      
+        <action name="send_message" class="com.scheduler.sbclinic.pages.contact.Contact" method="sendMessage">
+            <interceptor-ref name="defaultStack" />
+            <result name="input">/WEB-INF/views/Contact.jsp</result>
+            <result name="success">/WEB-INF/views/Contact.jsp</result>
+            <result name="error">/WEB-INF/views/Contact.jsp</result>
+        </action>
     </package>
 
     <!-- Add addition packages and configuration here. -->

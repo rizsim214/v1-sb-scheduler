@@ -9,7 +9,7 @@
 		<div class="col-md-4 mx-auto my-5 bg-info py-5 px-4 rounded" >
 			<s:set var="error" value="error"/>
 			<s:if test="%{#error != null}">
-				<p class="text-danger h5 bg-light text-center py-1"><s:property value="error" /></p>
+				<p class="text-danger h5 bg-light text-center py-1 rounded">Invalid Email or Password</p>
 			</s:if>
 			<h3 class="text-center text-light">WELCOME GUEST!</h3>
 	    	<s:include value="/WEB-INF/includes/_form-login.jsp" />

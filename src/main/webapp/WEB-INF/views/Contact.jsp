@@ -6,8 +6,12 @@
 	    <s:include value="/WEB-INF/includes/_navigation.jsp" />
 	</header>
 	<main>
-	    <s:url var="doctor" value="../../../../assets/images/doctor.svg" />
-	    <img src="${doctor}" border="0" alt="Home">
+		<div class="container">
+			<div class="col-md-5 mx-auto bg-info px-3 py-5 my-5 rounded">
+				<h3 class="text-center text-light">Contact Us</h3>
+	    		<s:include value="/WEB-INF/includes/contact/_contact_form.jsp"/>
+			</div>
+		</div>
 	</main>
 
 <s:include value="/WEB-INF/includes/_footer.jsp" />
