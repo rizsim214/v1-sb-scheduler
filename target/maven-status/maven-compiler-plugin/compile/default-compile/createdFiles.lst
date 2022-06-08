@@ -1,9 +1,0 @@
-com\scheduler\sbclinic\pages\contact\Contact.class
-com\scheduler\sbclinic\rest\AccountsController.class
-com\scheduler\sbclinic\rest\AccountsRepository.class
-com\scheduler\sbclinic\pages\Index.class
-com\scheduler\sbclinic\models\Message.class
-com\scheduler\sbclinic\pages\Services.class
-com\scheduler\sbclinic\pages\Appointment.class
-com\scheduler\sbclinic\models\Account.class
-com\scheduler\sbclinic\pages\login\Login.class
