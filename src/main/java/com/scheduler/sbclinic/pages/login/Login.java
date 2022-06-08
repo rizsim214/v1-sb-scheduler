@@ -29,10 +29,6 @@ public class Login extends ActionSupport{
         return returnValue;
     }
     
-    public String loginInput() throws Exception {
-        
-        return INPUT;
-    }
     private boolean fetchToDB() throws Exception{
 
         Connection connection = null;
