@@ -24,7 +24,7 @@
         </action>
     </package>
     <package name="rest" namespace="/rest" extends="rest-default">
-        <action name="Accounts/*" class="com.scheduler.sbclinic.rest.AccountsController">
+        <action name="accounts/*" class="com.scheduler.sbclinic.rest.AccountsController" >
             <result name="id"> ${1} </result>
         </action>
     </package>
