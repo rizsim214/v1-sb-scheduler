@@ -20,6 +20,9 @@
         <action name="services" class="com.scheduler.sbclinic.pages.Services">
             <result>/views/Services.jsp</result>
         </action>
+        <action name="news" class="com.scheduler.sbclinic.external_api.News">
+            <result>/views/News.jsp</result>
+        </action>
         <action name="contact" class="com.scheduler.sbclinic.pages.contact.Contact" method="execute">
             <result name="input">/views/Contact.jsp</result>
         </action>

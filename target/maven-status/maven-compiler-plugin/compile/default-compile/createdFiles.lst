@@ -1,0 +1,13 @@
+com\scheduler\sbclinic\pages\contact\Contact.class
+com\scheduler\sbclinic\rest\AccountsController.class
+com\scheduler\sbclinic\models\Article.class
+com\scheduler\sbclinic\rest\AccountsRepository.class
+com\scheduler\sbclinic\models\NewsResponse.class
+com\scheduler\sbclinic\external_api\News.class
+com\scheduler\sbclinic\pages\Appointment.class
+com\scheduler\sbclinic\models\Account.class
+com\scheduler\sbclinic\pages\login\Login.class
+com\scheduler\sbclinic\models\Source.class
+com\scheduler\sbclinic\pages\Index.class
+com\scheduler\sbclinic\models\Message.class
+com\scheduler\sbclinic\pages\Services.class

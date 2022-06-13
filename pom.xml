@@ -20,14 +20,22 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-json-plugin</artifactId>
+            <version>${struts2.version}</version>
+          </dependency>
+
+        <dependency>
+            <groupId>org.apache.struts</groupId>
             <artifactId>struts2-convention-plugin</artifactId>
             <version>${struts2.version}</version>
       </dependency>
+
       <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-rest-plugin</artifactId>
             <version>${struts2.version}</version>
       </dependency>
+      
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

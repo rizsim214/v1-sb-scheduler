@@ -23,6 +23,10 @@ pageEncoding="UTF-8"%>
                     <s:a class="nav-link" href="%{services}">Clinical Services </s:a>
                 </li>
                 <li class="nav-item">
+                    <s:url var="news" action="news" /> 
+                    <s:a class="nav-link" href="%{news}">News</s:a>
+                </li>
+                <li class="nav-item">
                     <s:url var="contact" action="contact" /> 
                     <s:a class="nav-link" href="%{contact}">Contact Us </s:a>
                 </li>

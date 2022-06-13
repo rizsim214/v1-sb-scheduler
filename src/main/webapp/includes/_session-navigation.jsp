@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info py-4">
    <div class="container">
-        <s:url var="home" value="/index.html" /> 
+        <s:url var="home" action="index" /> 
         <s:a href="%{home}" class="navbar-brand">
             <i class="fa-solid fa-stethoscope"></i> CLINIC
         </s:a>

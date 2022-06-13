@@ -15,6 +15,7 @@ public class AccountsController implements ModelDriven<Object> {
     private Account account = new Account();
     private static Map<String, Account> map;
     {
+        map = null;
         map = accountRepository.findAllAccounts();
     }
 
