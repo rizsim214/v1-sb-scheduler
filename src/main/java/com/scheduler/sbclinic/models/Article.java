@@ -44,7 +44,7 @@ public class Article {
         return publishedAt;
     }
     public void setPublishedAt(String publishedAt) {
-        this.publishedAt = publishedAt;
+        this.publishedAt = publishedAt.replaceAll("[T]\\S*[Z]", "");
     }
     public String getContent() {
         return content;

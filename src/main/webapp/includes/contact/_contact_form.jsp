@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 <s:form action="send_message" class="mx-auto w-100 px-2">
-    <p class="text-light text-center">Fill up the required fields...</p>
+    <h6 class="text-light text-center">We'll get in touch with you right away...</h6>
     <s:textfield name="contactBean.email" class="form-control mb-2 mt-2" placeholder="Email Address"/>
     <s:textfield name="contactBean.contactInfo" class="form-control mb-2 mt-2" placeholder="Mobile Number"/>
     <s:textfield name="contactBean.title" class="form-control mb-2 mt-2" placeholder="Message Title"/>
