@@ -17,10 +17,10 @@ public class News extends ActionSupport{
     private int error;
     private NewsResponse newsResponse;
     private String API_KEY = "801b3314101e43e3af296a4b660013bb";
-    private String searchQuery = "health";
+    private String searchQuery;
     private List<String> languages;
     private List<String> sortByList;
-    private String langaugeQuery = "en";
+    private String languageQuery = "en";
     private String sortQuery;
 
     public News() {
@@ -37,16 +37,16 @@ public class News extends ActionSupport{
     }
     
     public String execute() throws Exception {
-        String format = "yyyy-mm-dd";
+        String format = "yyyy-MM-dd";
         Calendar calendar  = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat(format);
         String currentDate = df.format(calendar.getTime());
-        
+        System.out.println(currentDate);
         try {
-            URL url = new URL("https://newsapi.org/v2/everything?q="+ getSearchQuery() + "&searchIn=title,description" + "&language="+ getLangaugeQuery() +"&from=" + currentDate + "&sortBy=" + getSortQuery() +"&apiKey=" + getAPI_KEY());
+            URL url = new URL("https://newsapi.org/v2/everything?q="+ getSearchQuery() + "&searchIn=title,description" + "&language="+ getLanguageQuery() +"&from=" + currentDate + "&sortBy=" + getSortQuery() +"&apiKey=" + getAPI_KEY());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-
+            System.out.println(url.toString());
             if(conn.getResponseCode() != 200){
                 setError(conn.getResponseCode());
                 throw new RuntimeException("FAILED : HTTP error code : " + conn.getResponseCode());
@@ -60,6 +60,7 @@ public class News extends ActionSupport{
                 setNewsResponse(mapper.readValue(output, NewsResponse.class));
             }
             System.out.println(newsResponse.getArticles());
+            System.out.println(getSearchQuery() + getLanguageQuery() + getSortQuery());
             conn.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
@@ -91,12 +92,13 @@ public class News extends ActionSupport{
         this.languages = languages;
     }
 
-    public String getLangaugeQuery() {
-        return langaugeQuery;
+
+    public String getLanguageQuery() {
+        return languageQuery;
     }
 
-    public void setLangaugeQuery(String langaugeQuery) {
-        this.langaugeQuery = langaugeQuery;
+    public void setLanguageQuery(String languageQuery) {
+        this.languageQuery = languageQuery;
     }
 
     public String getAPI_KEY() {

@@ -8,9 +8,9 @@
 	<main>
 		<div class="container mt-3">
 			<s:form action="news" method="POST" class="col-md-8 mx-auto">
-					<s:textfield class="form-control my-2" name="searchQuery" value="" placeholder="Search for news categories" />
-					<s:select headerKey="-1" headerValue="----Preferred Language----" list="languages" value="" name="langaugeQuery" class="form-control mb-2"/>
-					<s:select headerKey="-1" headerValue="----Sort By----" list="sortByList" value="" name="sortQuery" class="form-control mb-2"/>
+					<s:textfield class="form-control my-2" name="searchQuery" placeholder="Search for news categories" />
+					<s:select headerKey="-1" headerValue="----Preferred Language----" list="languages"  name="languageQuery" class="form-control mb-2"/>
+					<s:select headerKey="-1" headerValue="----Sort By----" list="sortByList"  name="sortQuery" class="form-control mb-2"/>
 					<s:submit value="Search" class="btn btn-primary"/>
 			</s:form>
 		</div>
