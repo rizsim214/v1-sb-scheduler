@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-info py-4">
+<div class="py-4 container text-center">
+    <s:url var="covid" action="covid"/>
+    <s:a href="%{covid}" class="text-primary h6"><em> Covid-19 Update Cases - Philippines</em></s:a>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info py-4 ">
    <div class="container-fluid px-5">
         <s:url var="home" action="index" /> 
         <s:a href="%{home}" class="navbar-brand">

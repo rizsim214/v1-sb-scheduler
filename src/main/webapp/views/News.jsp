@@ -7,7 +7,7 @@
 	</header>
 	<main>
 		<div class="container mt-3">
-			<s:form action="news" method="POST" class="col-md-8 mx-auto">
+			<s:form action="news" method="POST" class="col-md-7 mx-auto">
 					<s:textfield class="form-control my-2" name="searchQuery" placeholder="Search for news categories" />
 					<s:select headerKey="-1" headerValue="----Preferred Language----" list="languages"  name="languageQuery" class="form-control mb-2"/>
 					<s:select headerKey="-1" headerValue="----Sort By----" list="sortByList"  name="sortQuery" class="form-control mb-2"/>
@@ -21,7 +21,7 @@
 			<s:set var="error" value="error"/>
 			<s:if test="%{error != 426 && newsResponse != null}">
 				<s:iterator value="newsResponse.articles">
-					<div class="card col-md-5 mt-3 mx-1 shadow-lg">
+					<div class="card mt-3 mx-1 shadow-lg">
 						<h5 class="card-header py-4"><span class="fw-bold">Published At: </span><s:property value="publishedAt"/></h5>
 						<div class="card-body">
 							<h5 class="card-title"><s:property value="title" /> by <span class="fw-bold"><s:property value="author" /></span></h5>

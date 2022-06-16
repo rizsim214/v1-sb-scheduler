@@ -26,12 +26,10 @@
         <action name="contact" class="com.scheduler.sbclinic.pages.contact.Contact" method="execute">
             <result name="input">/views/Contact.jsp</result>
         </action>
-        <action name="send_message" class="com.scheduler.sbclinic.pages.contact.Contact" method="sendMessage">
-            <interceptor-ref name="defaultStack" />
-            <result name="input">/views/Contact.jsp</result>
-            <result name="success">/views/Contact.jsp</result>
-            <result name="error">/views/Contact.jsp</result>
+        <action name="covid" class="com.scheduler.sbclinic.external_api.CovidCases">
+            <result>/views/CovidCases.jsp</result>
         </action>
+      
     </package>
 
     <!-- Add addition packages and configuration here. -->

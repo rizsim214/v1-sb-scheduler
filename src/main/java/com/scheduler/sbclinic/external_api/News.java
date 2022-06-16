@@ -41,26 +41,21 @@ public class News extends ActionSupport{
         Calendar calendar  = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat(format);
         String currentDate = df.format(calendar.getTime());
-        System.out.println(currentDate);
         try {
             URL url = new URL("https://newsapi.org/v2/everything?q="+ getSearchQuery() + "&searchIn=title,description" + "&language="+ getLanguageQuery() +"&from=" + currentDate + "&sortBy=" + getSortQuery() +"&apiKey=" + getAPI_KEY());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            System.out.println(url.toString());
             if(conn.getResponseCode() != 200){
                 setError(conn.getResponseCode());
                 throw new RuntimeException("FAILED : HTTP error code : " + conn.getResponseCode());
             }
-
             BufferedReader br = new BufferedReader( new InputStreamReader(conn.getInputStream()));
             String output;
-
             while((output = br.readLine()) != null) {
                 ObjectMapper mapper = new ObjectMapper();
                 setNewsResponse(mapper.readValue(output, NewsResponse.class));
             }
-            System.out.println(newsResponse.getArticles());
-            System.out.println(getSearchQuery() + getLanguageQuery() + getSortQuery());
+            
             conn.disconnect();
         } catch (Exception e) {
             e.printStackTrace();

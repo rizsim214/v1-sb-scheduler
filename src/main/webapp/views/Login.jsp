@@ -13,7 +13,7 @@
 			</s:if>
 			<h3 class="text-center text-light">WELCOME GUEST!</h3>
 	    	<s:include value="/includes/_form-login.jsp" />
-			<p class="text-primary text-center mt-2">No scheduled date yet?  <s:a href="#" class="text-light text-decoration-none h5">Request Appointment</s:a></p>
+			<p class="text-light text-center mt-2">No scheduled date yet?  <s:a href="#" class="text-primary text-decoration-none h5">Request Appointment</s:a></p>
 		</div>
 	</main>
 
