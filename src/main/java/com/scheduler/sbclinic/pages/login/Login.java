@@ -1,5 +1,8 @@
 package com.scheduler.sbclinic.pages.login;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -25,7 +28,7 @@ public class Login extends ActionSupport{
         }else{
             returnValue = ERROR;
         }
-        
+        System.out.println(generateHashedPass("password123"));
         return returnValue;
     }
     
@@ -40,7 +43,7 @@ public class Login extends ActionSupport{
             connection = DriverManager.getConnection(URL, "root", "password123");
 
             if(connection != null){
-                String user_sql = "SELECT * FROM users WHERE email_add = '"+accountBean.getEmail()+"' AND pass_word = '"+accountBean.getUserPassword()+"'";
+                String user_sql = "SELECT * FROM users WHERE email_add = '"+accountBean.getEmail()+"' AND pass_word = '"+generateHashedPass(accountBean.getUserPassword())+"'";
                 preparedStatement = connection.prepareStatement(user_sql);
                 ResultSet rs = preparedStatement.executeQuery();
 
@@ -70,6 +73,27 @@ public class Login extends ActionSupport{
             if(connection != null) try { connection.close();} catch(SQLException ignore) {} 
         }   
     }
+
+    public String generateHashedPass(String stringToHash) {
+        String generated_password = null;
+
+        try {
+
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            byte[] hash = md.digest(stringToHash.getBytes(StandardCharsets.UTF_8));
+            StringBuilder sb = new StringBuilder();
+    
+            for(int i = 0; i< hash.length; i++) {
+                sb.append(Integer.toString((hash[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            generated_password = sb.toString();
+        } catch (NoSuchAlgorithmException  e) {
+            e.printStackTrace();
+        }
+
+        return generated_password;
+    } 
+
     public Account getAccountBean() {
         return accountBean;
     }
