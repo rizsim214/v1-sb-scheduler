@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import com.opensymphony.xwork2.ActionSupport;
 import com.scheduler.sbclinic.models.Account;
 
+
 public class Login extends ActionSupport{
     
     private String error;
@@ -22,13 +23,13 @@ public class Login extends ActionSupport{
         
         accountBean = getAccountBean();
         String returnValue;
-        
-       if(fetchToDB()){
+       
+         if(fetchToDB()){
             returnValue = SUCCESS;
         }else{
             returnValue = ERROR;
         }
-        System.out.println(generateHashedPass("password123"));
+        
         return returnValue;
     }
     
@@ -117,5 +118,6 @@ public class Login extends ActionSupport{
     public void setSessionAccount(Account sessionAccount) {
         this.sessionAccount = sessionAccount;
     }
-    
+
+
 }

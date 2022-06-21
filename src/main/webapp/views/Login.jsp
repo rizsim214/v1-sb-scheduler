@@ -14,6 +14,7 @@
 			<h3 class="text-center text-light">WELCOME GUEST!</h3>
 	    	<s:include value="/includes/_form-login.jsp" />
 			<p class="text-light text-center mt-2">No scheduled date yet?  <s:a href="#" class="text-primary text-decoration-none h5">Request Appointment</s:a></p>
+			<s:a href="https://sbclinic.hub.loginradius.com/auth.aspx?action=login&return_url=http://localhost:8080/patient">Login with Login Radius</s:a>
 		</div>
 	</main>
 

@@ -8,9 +8,13 @@
 
     <package name="sb-clinic-pages" namespace="/" extends="struts-default">
         
-        <action name="login" class="com.scheduler.sbclinic.pages.login.Login">
+        <action name="login" class="com.scheduler.sbclinic.pages.login.Login" method="execute">
             <interceptor-ref name="defaultStack"/>
             <result name="input">/views/Login.jsp</result>
+            <result name="success">/views/profiles/Patient.jsp</result>
+            <result name="error">/views/Login.jsp</result>
+        </action>
+        <action name="patient" class="com.scheduler.sbclinic.pages.Patient" method="execute">
             <result name="success">/views/profiles/Patient.jsp</result>
             <result name="error">/views/Login.jsp</result>
         </action>

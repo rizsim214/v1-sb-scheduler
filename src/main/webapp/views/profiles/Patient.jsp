@@ -6,7 +6,8 @@
 	    <s:include value="/includes/_session-navigation.jsp" />
 	</header>
 	<main>
-	    <h3><s:property value="sessionAccount.email" /></h3>
+	   <h3>HELLO USER!</h3>
+	   <s:a href="https://sbclinic.hub.loginradius.com/auth.aspx?profile.aspx">Profile</s:a>
 	</main>
 
 <s:include value="/includes/_footer.jsp" />

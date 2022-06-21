@@ -19,10 +19,10 @@ pageEncoding="UTF-8"%>
                     </a>
                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">View History</a></li>
-                        <li><a class="dropdown-item" href="#">Update Account</a></li>
+                        <li><a class="dropdown-item" href="https://sbclinic.hub.loginradius.com/auth.aspx?profile.aspx">Update Account</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        
-                        <li><s:a class="dropdown-item" href="%{home}">Sign Out</s:a></li>
+                        <s:url var="logout" action="logout" />
+                        <li><s:a class="dropdown-item" href="https://sbclinic.hub.loginradius.com/auth.aspx?action=logout&return_url=http://localhost:8080/index">Sign Out</s:a></li>
                    </ul>
                 </li>
             </ul>
